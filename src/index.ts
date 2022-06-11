@@ -60,3 +60,25 @@ function notas(nota: number | string){
 }
 notas(10);
 notas('10');
+
+// Alias
+type Aluno = {
+    nome:string;
+    sobrenome:string;
+    idade: number;
+    solteiro: boolean;
+}
+
+const alunos: Aluno[] = [
+{
+    nome:'Eduardo',
+    sobrenome:'Gobbato',
+    idade: 40,
+    solteiro: false,
+},
+{   nome:'Rafael',
+    sobrenome:'Sangali',
+    idade: 23,
+    solteiro: false,
+},
+] 

@@ -49,3 +49,16 @@ function notas(nota) {
 }
 notas(10);
 notas('10');
+const alunos = [
+    {
+        nome: 'Eduardo',
+        sobrenome: 'Gobbato',
+        idade: 40,
+        solteiro: false,
+    },
+    { nome: 'Rafael',
+        sobrenome: 'Sangali',
+        idade: 23,
+        solteiro: false,
+    },
+];
