@@ -110,3 +110,26 @@ function setAluno(aluno: AlunoGama){
 interface EndAluno extends AlunoGama {
     endereço: string,
 }
+
+// Classes
+
+class User {
+    name: string;
+    role: string;
+    isApproved: boolean;
+
+    constructor(name:string, role:string, isApproved:boolean){
+        this.name =name;
+        this.role =role;
+        this.isApproved = isApproved;
+    }
+}
+
+class User2 {   
+    constructor(public name:string, private role:string,protected isApproved:boolean){
+    }
+}
+
+// public - pode ser acessado de fora da classe
+// private - não pode ser acessado fora da classe
+// protected - só acessivel dentro e subclasses

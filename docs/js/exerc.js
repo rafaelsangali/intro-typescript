@@ -1,5 +1,5 @@
 "use strict";
-let endereco = [
+var endereco = [
     {
         postId: 1,
         id: 1,
