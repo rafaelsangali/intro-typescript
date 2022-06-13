@@ -82,3 +82,8 @@ const alunos: Aluno[] = [
     solteiro: false,
 },
 ] 
+
+// type assertion - definir tipagem quando ela for usada
+const quantidadeAlunos: any = 26;
+(quantidadeAlunos as number).toString();
+<number>quantidadeAlunos.toString() // outra forma de tipar

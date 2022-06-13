@@ -62,3 +62,7 @@ const alunos = [
         solteiro: false,
     },
 ];
+// type assertion - definir tipagem quando ela for usada
+const quantidadeAlunos = 26;
+quantidadeAlunos.toString();
+quantidadeAlunos.toString(); // outra forma de tipar
