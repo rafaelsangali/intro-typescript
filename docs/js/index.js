@@ -66,3 +66,12 @@ const alunos = [
 const quantidadeAlunos = 26;
 quantidadeAlunos.toString();
 quantidadeAlunos.toString(); // outra forma de tipar
+function novoAluno() {
+    return {
+        nome: 'Rafael',
+        email: 'email@email.com'
+    };
+}
+function setAluno(aluno) {
+    //...
+}

@@ -87,3 +87,26 @@ const alunos: Aluno[] = [
 const quantidadeAlunos: any = 26;
 (quantidadeAlunos as number).toString();
 <number>quantidadeAlunos.toString() // outra forma de tipar
+
+// interfaces
+
+interface AlunoGama {
+    nome:string,
+    email:string,
+    idade?:number,
+}
+
+function novoAluno():AlunoGama{
+    return {
+        nome: 'Rafael',
+        email: 'email@email.com'
+    }
+}
+
+function setAluno(aluno: AlunoGama){
+    //...
+}
+
+interface EndAluno extends AlunoGama {
+    endereço: string,
+}
