@@ -126,10 +126,20 @@ class User {
 }
 
 class User2 {   
-    constructor(public name:string, private role:string,protected isApproved:boolean){
+    constructor(public name?:string, private role?:string,protected isApproved?:boolean){
     }
 }
-
 // public - pode ser acessado de fora da classe
+ let q = new User2('Xulia', 'Admin', false);
+console.log(q.name);
+
 // private - não pode ser acessado fora da classe
+
 // protected - só acessivel dentro e subclasses
+
+class User3 extends User2 {
+    constructor(public age:number, isApproved:string){
+        super(isApproved);
+        this.age = age
+    }
+}
