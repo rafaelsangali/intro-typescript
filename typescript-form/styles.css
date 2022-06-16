@@ -1,0 +1,11 @@
+body {
+    margin: 3em;
+}
+
+main {
+    margin-top: 2em;
+}
+
+#mySuccess {
+    color: green;
+}

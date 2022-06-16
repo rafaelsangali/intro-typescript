@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript - Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>Formulário com TypeScript<span id="mySuccess" class="d-none"> - Success!</span></h2>
+    <div class="spinner-border d-none" role="status" id="mySpinner">
+        <span class="sr-only"></span>
+    </div>
+    <main>
+        <form class="row g-3">
+            <div class="col-md-4">
+                <label for="inputName" class="form-label">Nome</label>
+                <input type="name" class="form-control" id="inputName">
+            </div>
+            <div class="col-md-4">
+                <label for="inputUsername" class="form-label">Username</label>
+                <input type="username" class="form-control" id="inputUserName">
+            </div>
+            <div class="col-md-4">
+                <label for="inputEmail4" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="inputEmail">
+            </div>
+            <div class="col-md-6">
+                <label for="inputAddress" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="inputAddress">
+            </div>
+            <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Complemento</label>
+                <input type="text" class="form-control" id="inputAddressComplement">
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="typePhone">Telefone</label>
+                <input type="tel" id="typePhone" class="form-control" placeholder="(000) 000-000-000" />
+            </div>
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+            <div class="col-md-4">
+                <label for="inputCity" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+                <label for="inputCompanyName" class="form-label">Nome da Empresa</label>
+                <input type="text" class="form-control" id="inputCompanyName">
+            </div>
+            <div class="col-md-2">
+                <label class="form-label" for="typeURL">Site da Empresa</label>
+                <input type="url" id="typeURL" class="form-control" />
+            </div>
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Concordo com os termos de uso
+                    </label>
+                </div>
+            </div>
+            <div class="d-grid gap-2 d-md-block">
+                <button type="submit" class="btn btn-primary" id="getDataBtn">Buscar dados</button>
+                <button type="submit" class="btn btn-success" id="sendDataBtn">Enviar</button>
+            </div>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
