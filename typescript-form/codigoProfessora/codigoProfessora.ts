@@ -1,5 +1,5 @@
 interface Address {
-  street: String;
+  street: string;
   suite: string;
   city: string;
   zipcode: string;
@@ -10,7 +10,7 @@ interface Company {
 }
 
 interface User {
-  id: number;
+  id: string;
   name: string;
   username: string;
   email: string;
@@ -67,7 +67,7 @@ function form() {
       htmlSelectors();
 
     const saveUser = await updateUser({
-      id: 1,
+      id: '1',
       name: inputName.value,
       username: inputUserName.value,
       email: inputEmail.value,
