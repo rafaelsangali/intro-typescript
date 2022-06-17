@@ -10,7 +10,7 @@ interface Company {
 }
 
 interface User {
-  id: string;
+  id: number;
   name: string;
   username: string;
   email: string;
@@ -67,7 +67,7 @@ function form() {
       htmlSelectors();
 
     const saveUser = await updateUser({
-      id: '1',
+      id: 1,
       name: inputName.value,
       username: inputUserName.value,
       email: inputEmail.value,

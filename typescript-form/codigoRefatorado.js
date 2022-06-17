@@ -48,7 +48,6 @@ function insertData(event) {
         event.preventDefault();
         const data = yield getUser(1);
         const inputs = htmlSelectors();
-        console.log(data);
         if (!data)
             return;
         inputs.inputName.value = data.name;
@@ -57,7 +56,7 @@ function insertData(event) {
         inputs.inputAddress.value = data.address.street;
         inputs.inputAddressComplement.value = data.address.suite;
         inputs.typePhone.value = data.phone;
-        inputs.inputId.value = data.id;
+        inputs.inputId.valueAsNumber = data.id;
         inputs.inputZip.value = data.address.zipcode;
         inputs.inputCity.value = data.address.city;
         inputs.inputCompanyName.value = data.company.name;
@@ -72,7 +71,7 @@ function updateData(event) {
             name: inputs.inputName.value,
             username: inputs.inputUserName.value,
             email: inputs.inputEmail.value,
-            id: inputs.inputId.value,
+            id: inputs.inputId.valueAsNumber,
             address: {
                 street: inputs.inputAddress.value,
                 suite: inputs.inputAddressComplement.value,

@@ -10,7 +10,7 @@ interface Company {
 }
 
 interface User {
-  id: string;
+  id: number;
   name: string;
   username: string;
   email: string;
@@ -35,7 +35,6 @@ function htmlSelectors() {
       inputCompanyName: selector("inputCompanyName") as HTMLInputElement,
       typeURL: selector("typeURL") as HTMLInputElement,
       inputId: selector("inputId") as HTMLInputElement,
-
       getDataBtn: selector("getDataBtn") as HTMLButtonElement,
       sendDataBtn: selector("sendDataBtn") as HTMLButtonElement,
     }
@@ -64,8 +63,6 @@ async function insertData(event: Event): Promise<void> {
     event.preventDefault();
     const data = await getUser(1)
     const inputs = htmlSelectors()
-    console.log(data);
-    
         
     if (!data) return;
     inputs.inputName.value = data.name;
@@ -74,7 +71,7 @@ async function insertData(event: Event): Promise<void> {
     inputs.inputAddress.value = data.address.street
     inputs.inputAddressComplement.value = data.address.suite;
     inputs.typePhone.value = data.phone;
-    inputs.inputId.value = data.id
+    inputs.inputId.valueAsNumber = data.id
     inputs.inputZip.value = data.address.zipcode;
     inputs.inputCity.value = data.address.city;
     inputs.inputCompanyName.value = data.company.name;
@@ -89,7 +86,7 @@ async function updateData(event: Event): Promise<void>{
       name: inputs.inputName.value,
       username: inputs.inputUserName.value,
       email: inputs.inputEmail.value,
-      id: inputs.inputId.value,
+      id: inputs.inputId.valueAsNumber,
       address:{
         street: inputs.inputAddress.value,
         suite: inputs.inputAddressComplement.value,
@@ -103,7 +100,7 @@ async function updateData(event: Event): Promise<void>{
       website: inputs.typeURL.value 
         }
 
-   async function updateUser(id: string): Promise<User | undefined> {
+   async function updateUser(id: number): Promise<User | undefined> {
     try {
       let response = await fetch(
         `https://jsonplaceholder.typicode.com/users/${id}`,
@@ -120,6 +117,5 @@ async function updateData(event: Event): Promise<void>{
       console.error(err);
     }
   }
-
   updateUser(getInfoFromInputs.id)
 }

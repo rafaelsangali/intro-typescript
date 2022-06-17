@@ -48,7 +48,7 @@ function form() {
             event.preventDefault();
             const { inputName, inputUserName, inputEmail, inputAddress } = htmlSelectors();
             const saveUser = yield updateUser({
-                id: '1',
+                id: 1,
                 name: inputName.value,
                 username: inputUserName.value,
                 email: inputEmail.value,
